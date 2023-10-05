@@ -1,7 +1,7 @@
 from django.urls import path, include
 from .views import ListTodo, DetailTodo, ListTraining_history, DetailTraining_history,ListTraining_list, DetailTraining_list
 from .views import CreateTrainingHistoryView, CreateRecommendHistoryView
-from .views import DummyRespponseApiView
+from .views import DummyRespponseApiView,ChatRespponseApiView
 
 urlpatterns = [
     path('todo/<int:pk>/', DetailTodo.as_view()),
@@ -12,5 +12,6 @@ urlpatterns = [
     path('training_list/', ListTraining_list.as_view()),
     path('training_history/create/',CreateTrainingHistoryView.as_view()),
     path('recommend_history/create/',CreateRecommendHistoryView.as_view()),
-    path('response/',DummyRespponseApiView.as_view()),
+    path('chat_dummy/',DummyRespponseApiView.as_view()),
+    path('chat/',ChatRespponseApiView.as_view()),
 ]
