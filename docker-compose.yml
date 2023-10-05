@@ -42,35 +42,40 @@ services:
       MYSQL_DATABASE: todoList
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-      TZ: 'Asia/Tokyo'
+      TZ: "Asia/Tokyo"
     volumes:
       - ./mysql_volume:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
     networks:
       - volcano_network
 
-  # web-front:
-  #   image: node:latest
-  #   volumes:
-  #     - ./frontend/web-front:/home/app/frontend
-  #   ports:
-  #     - 3000:3000
-  #   working_dir: /home/app/frontend
-  #   command: [bash, -c, yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev]
-  #   networks:
-  #     - hurricane_network
-      
-  # frontend-server:
-  #   container_name: nginx_frontend
-  #   build:
-  #     context: ./frontend/nginx/.
-  #     dockerfile: Dockerfile.dev
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - web-front
-  #   networks:
-  #     - hurricane_network
+  web-front:
+    image: node:latest
+    volumes:
+      - ./frontend/web-front:/home/app/frontend
+    ports:
+      - 3000:3000
+    working_dir: /home/app/frontend
+    command:
+      [
+        bash,
+        -c,
+        yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev,
+      ]
+    networks:
+      - hurricane_network
+
+  frontend-server:
+    container_name: nginx_frontend
+    build:
+      context: ./frontend/nginx/.
+      dockerfile: Dockerfile.dev
+    ports:
+      - "80:80"
+    depends_on:
+      - web-front
+    networks:
+      - hurricane_network
 
 networks:
   volcano_network:
