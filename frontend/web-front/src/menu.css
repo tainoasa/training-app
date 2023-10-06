@@ -42,7 +42,8 @@ nav button {
   text-align: right;
   /* vertical-align: auto; */
   display: flex;
-  justify-content: flex-end; /* ボタンを均等に配置 */
+  justify-content: flex-end;
+  /* ボタンを均等に配置 */
   max-width: 500px;
   margin: -49px 10px 0 auto;
 }
@@ -139,22 +140,30 @@ div.comment {
 
 .balloon-set-box.right {
   /* 右 */
-  flex-direction: row-reverse; /* アイコンと吹き出しの並びを入れ替える */
+  flex-direction: row-reverse;
+  /* アイコンと吹き出しの並びを入れ替える */
 }
+
 .balloon {
-  position: relative; /* 三角の位置を固定するために設定 */
+  position: relative;
+  /* 三角の位置を固定するために設定 */
   display: inline-block;
   width: auto;
   height: 60px;
   max-width: 500px;
-  margin: 10px 20px 20px; /* 上 左右 下のマージン */
-  padding: 8px 15px; /* ふきだし内の余白 */
-  background: #f0f0f0; /* 背景色 */
-  text-align: left; /* テキストの揃え */
+  margin: 10px 20px 20px;
+  /* 上 左右 下のマージン */
+  padding: 8px 15px;
+  /* ふきだし内の余白 */
+  background: #f0f0f0;
+  /* 背景色 */
+  text-align: left;
+  /* テキストの揃え */
   border-radius: 15px;
   margin-top: 80px;
   font-size: 30px;
 }
+
 .balloon::after {
   content: "";
   border: 14px solid transparent;
@@ -211,6 +220,7 @@ div.comment {
   /* overflow: scroll; */
   /* margin-left: 0px; */
 }
+
 .arrow_box:after {
   border: solid transparent;
   content: "";
