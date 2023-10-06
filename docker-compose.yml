@@ -60,11 +60,7 @@ services:
       [
         bash,
         -c,
-<<<<<<< HEAD
         yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev
-=======
-        yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev,
->>>>>>> d-branch
       ]
     networks:
       - hurricane_network

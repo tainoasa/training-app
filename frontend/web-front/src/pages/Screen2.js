@@ -1,10 +1,10 @@
 import React from 'react';
-import TalkToLlma from './TalkToLlma';
+import TalkToLlma from './TalkToLlama';
 
 function Screen2() {
   return (
     <>
-      <TalkToLlma/>
+      <TalkToLlma />
     </>
   )
 }
