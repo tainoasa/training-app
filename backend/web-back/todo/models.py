@@ -27,7 +27,7 @@ class Training_list(models.Model):
 
 class Recommend_history(models.Model):
     input_txt = models.TextField()
-    recommend_name = models.CharField(max_length=30)
+    recommend_name = models.CharField(max_length=3000)
 
 class User_info(models.Model):
     ex_parameter = models.IntegerField(blank=True, null=True)
