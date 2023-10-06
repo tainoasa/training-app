@@ -1,11 +1,10 @@
 from django.urls import path, include
-from .views import ListTodo, DetailTodo, ListTraining_history, DetailTraining_history,ListTraining_list, DetailTraining_list
+from .views import ListTraining_history, DetailTraining_history,ListTraining_list, DetailTraining_list
 from .views import CreateTrainingHistoryView, CreateRecommendHistoryView
 from .views import DummyRespponseApiView,ChatRespponseApiView,CalcUserExApiView
 
 urlpatterns = [
-    path('todo/<int:pk>/', DetailTodo.as_view()),
-    path('todo/', ListTodo.as_view()),
+
     path('training_history/<int:pk>/', DetailTraining_history.as_view()),
     path('training_history/', ListTraining_history.as_view()),
     path('training_list/<int:pk>/', DetailTraining_list.as_view()),
