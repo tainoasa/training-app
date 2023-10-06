@@ -1,0 +1,40 @@
+.progressBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+.progressBar {
+    text-align: center;
+    width: 60%;
+    height: 30px;
+    background-color: #ccc;
+    /* プログレスバーの背景色 */
+    border-radius: 5px;
+}
+
+.progressBarValue {
+    height: 100%;
+    background-color: #10ba62;
+    /* 進行バーの色 (例: 青色) */
+    border-radius: 5px;
+}
+
+.kangaroo {
+    width: 40%;
+    height: 40%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.Status_h2 {
+    margin: 5px auto;
+}
+
+.showlevel {
+    text-align: end;
+}

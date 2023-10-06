@@ -1,14 +1,11 @@
 import React, { FC, useEffect, useState } from 'react'
 import axios, { AxiosInstance } from 'axios'
-
-type Todo = {
-    id: string
-    title: String
-    body: String
-}
+import ReTraining from './ReTraining';
+import ExperienceGauge from './ExperienceGauge';
+import styles from './index.module.css';
+import PastTraining from './PastTraining';
 
 export default (() => {
-    const [todos, setTodo] = useState<Todo[]>([])
 
     const getAPIData = async () => {
         let instance: AxiosInstance
@@ -16,26 +13,18 @@ export default (() => {
         instance = axios.create({
             baseURL: 'http://localhost:8080',
         })
-
-        try {
-            const response = await instance.get('/api/')
-            console.log(response?.data)
-            const tododata = response?.data as Todo[]
-            setTodo(tododata)
-        } catch (error) {
-            console.log(error)
-        }
     }
     return (
-        <div>
-            hello world
-            <button onClick={getAPIData}>click</button>
-            {todos.map((item) => (
-                <div key={item.id}>
-                    <h1>{item.title}</h1>
-                    <p>{item.body}</p>
-                </div>
-            ))}
+        <div className={styles.grid_container}>
+            <div className={styles.Table}>
+                <ReTraining />
+            </div>
+            <div className={styles.Status}>
+                <ExperienceGauge level={7} n={1000} />
+            </div>
+            <div className={styles.Past}>
+                <PastTraining />
+            </div>
         </div>
     )
 }) as FC

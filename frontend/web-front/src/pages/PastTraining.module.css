@@ -1,0 +1,16 @@
+.Past {
+    position: relative;
+    height: 300px;
+}
+
+.PastTitle {
+    margin-top: 270px;
+    text-align: center;
+}
+
+.PastTable {
+    font-size: 25px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
