@@ -40,7 +40,7 @@ class CreateRecommendHistoryView(generics.CreateAPIView):
 class DummyRespponseApiView(generics.ListAPIView):
     authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
     def post(self, request, format=None):
-        res = requests.post('http://172.20.7.60:2150/chat',json={"text":"野球するには何の筋トレすればいいですか？"})
+        # res = requests.post('http://172.20.7.60:2150/chat',json={"text":"野球するには何の筋トレすればいいですか？"})
         json = {"name": "DUMMY!","menu":["ベンチプレス","ペックフライ"]}
         return Response(json)
 

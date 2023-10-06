@@ -131,7 +131,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = function() { return "abf799c3cb442a81"; }
+=======
+/******/ 		__webpack_require__.h = function() { return "6e6be4725f946653"; }
+>>>>>>> d-branch
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

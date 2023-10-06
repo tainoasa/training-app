@@ -12,6 +12,7 @@ exports.id = "pages/_app";
 exports.ids = ["pages/_app"];
 exports.modules = {
 
+<<<<<<< HEAD
 /***/ "./src/pages/Layout.js":
 /*!*****************************!*\
   !*** ./src/pages/Layout.js ***!
@@ -34,6 +35,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+=======
+>>>>>>> d-branch
 /***/ "./src/pages/_app.tsx":
 /*!****************************!*\
   !*** ./src/pages/_app.tsx ***!
@@ -41,6 +44,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ \"./src/pages/Layout.js\");\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.css */ \"./src/pages/app.css\");\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction TrainingApp({ Component, pageProps }) {\n    // 共通のレイアウトやコンポーネントをここで設定\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"/home/app/frontend/src/pages/_app.tsx\",\n            lineNumber: 9,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/app/frontend/src/pages/_app.tsx\",\n        lineNumber: 8,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TrainingApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZXMvX2FwcC50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUM4QjtBQUNYO0FBRW5CLFNBQVNDLFlBQVksRUFBRUMsU0FBUyxFQUFFQyxTQUFTLEVBQVk7SUFDckQseUJBQXlCO0lBQ3pCLHFCQUNFLDhEQUFDSCwrQ0FBTUE7a0JBQ0wsNEVBQUNFO1lBQVcsR0FBR0MsU0FBUzs7Ozs7Ozs7Ozs7QUFHOUI7QUFDQSxpRUFBZUYsV0FBV0EsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2Zyb250ZW5kLy4vc3JjL3BhZ2VzL19hcHAudHN4P2Y5ZDYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQXBwUHJvcHMgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgTGF5b3V0IGZyb20gJy4vTGF5b3V0JztcbmltcG9ydCAnLi9hcHAuY3NzJztcblxuZnVuY3Rpb24gVHJhaW5pbmdBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9OiBBcHBQcm9wcykge1xuICAvLyDlhbHpgJrjga7jg6zjgqTjgqLjgqbjg4jjgoTjgrPjg7Pjg53jg7zjg43jg7Pjg4jjgpLjgZPjgZPjgafoqK3lrppcbiAgcmV0dXJuIChcbiAgICA8TGF5b3V0PlxuICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgIDwvTGF5b3V0PlxuICApO1xufVxuZXhwb3J0IGRlZmF1bHQgVHJhaW5pbmdBcHA7XG4iXSwibmFtZXMiOlsiTGF5b3V0IiwiVHJhaW5pbmdBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/_app.tsx\n");
 
 /***/ }),
@@ -49,12 +53,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!***************************!*\
   !*** ./src/pages/app.css ***!
   \***************************/
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../menu.css */ \"./src/menu.css\");\n/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n// import LayoutMain from '../layouts/LayoutMain'\nfunction App({ Component, pageProps }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"/home/app/frontend/src/pages/_app.tsx\",\n            lineNumber: 8,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/app/frontend/src/pages/_app.tsx\",\n        lineNumber: 7,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZXMvX2FwcC50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBMEI7QUFDTDtBQUNyQixpREFBaUQ7QUFFakQsU0FBU0MsSUFBSSxFQUFFQyxTQUFTLEVBQUVDLFNBQVMsRUFBRTtJQUNuQyxxQkFDRSw4REFBQ0M7a0JBQ0MsNEVBQUNGO1lBQVcsR0FBR0MsU0FBUzs7Ozs7Ozs7Ozs7QUFHOUI7QUFDQSxpRUFBZUYsR0FBR0EsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2Zyb250ZW5kLy4vc3JjL3BhZ2VzL19hcHAudHN4P2Y5ZDYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IFwiLi4vbWVudS5jc3NcIjtcbi8vIGltcG9ydCBMYXlvdXRNYWluIGZyb20gJy4uL2xheW91dHMvTGF5b3V0TWFpbidcblxuZnVuY3Rpb24gQXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfSkge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XG4gICAgPC9kaXY+XG4gICk7XG59XG5leHBvcnQgZGVmYXVsdCBBcHA7XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiLCJkaXYiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/_app.tsx\n");
+
+/***/ }),
+
+/***/ "./src/menu.css":
+/*!**********************!*\
+  !*** ./src/menu.css ***!
+  \**********************/
+>>>>>>> d-branch
 /***/ (() => {
 
 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
 /*!**********************************************************************!*\
   !*** external "next/dist/compiled/next-server/pages.runtime.dev.js" ***!
@@ -66,6 +81,8 @@ module.exports = require("next/dist/compiled/next-server/pages.runtime.dev.js");
 
 /***/ }),
 
+=======
+>>>>>>> d-branch
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -77,6 +94,7 @@ module.exports = require("react");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "react-dom":
 /*!****************************!*\
   !*** external "react-dom" ***!
@@ -88,6 +106,8 @@ module.exports = require("react-dom");
 
 /***/ }),
 
+=======
+>>>>>>> d-branch
 /***/ "react/jsx-dev-runtime":
 /*!****************************************!*\
   !*** external "react/jsx-dev-runtime" ***!
@@ -97,6 +117,7 @@ module.exports = require("react-dom");
 "use strict";
 module.exports = require("react/jsx-dev-runtime");
 
+<<<<<<< HEAD
 /***/ }),
 
 /***/ "fs":
@@ -130,6 +151,8 @@ module.exports = require("stream");
 "use strict";
 module.exports = require("zlib");
 
+=======
+>>>>>>> d-branch
 /***/ })
 
 };
@@ -139,7 +162,11 @@ module.exports = require("zlib");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc"], () => (__webpack_exec__("./src/pages/_app.tsx")));
+=======
+var __webpack_exports__ = (__webpack_exec__("./src/pages/_app.tsx"));
+>>>>>>> d-branch
 module.exports = __webpack_exports__;
 
 })();

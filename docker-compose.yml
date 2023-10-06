@@ -42,7 +42,7 @@ services:
       MYSQL_DATABASE: todoList
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-      TZ: 'Asia/Tokyo'
+      TZ: "Asia/Tokyo"
     volumes:
       - ./mysql_volume:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
@@ -60,7 +60,11 @@ services:
       [
         bash,
         -c,
+<<<<<<< HEAD
         yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev
+=======
+        yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev,
+>>>>>>> d-branch
       ]
     networks:
       - hurricane_network
