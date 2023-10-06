@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+}
+
+header .menu-list {
+    background-color: #555555;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    color: white;
+    font-family: "MS Pゴシック";
+    text-align: center;
+    font-size: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+header img {
+    width: 6%;
+    padding-bottom: 20px;
+    color: white;
+}
+
+/* ボタンの設定 */
+nav button {
+    text-decoration: none;
+}
+
+/* ナビゲーションボタンの群 */
+.nav_btns {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    /* ボタンを均等に配置 */
+    /* max-width: 1000px; */
+    margin: -49px 10px 0 auto;
+}
+
+/* ナビゲーションボタン専用の設定 */
+.nav_btn {
+    flex: 1;
+
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+
+    border: 1px solid white;
+    background-color: #777777;
+    color: white;
+
+    transform: skewX(-20deg);
+    cursor: pointer;
+
+    /* transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function:ease; */
+}
+
+.nav_btn:hover {
+    font-weight: bold;
+    border: 1px solid #aaaaaa;
+    background-color: #bbbbbb;
+    color: white;
+    /* transition-property:all;
+    transition-duration:5s;
+    transition-timing-function:ease; */
+}
+
+main {
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+}
+
+form p {
+    color: #555555;
+    margin-top: 30px;
+    margin-left: 70px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form input {
+    color: #555555;
+    margin-top: 5px;
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ai {
+    display: flex;
+    justify-content: center;
+}
+
+div.trainning-menu {
+    display: flex;
+    justify-content: center;
+    max-width: 40%;
+}
+
+.trainning-menu img {
+    width: 90%;
+    height: 45%;
+    /* margin-top: 10px; */
+    margin-top: 110px;
+    padding-right: 10px;
+    margin-left: 70px;
+}
+
+.set {
+    text-align: center;
+}
+
+.today p {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #111111;
+}
+
+.arrow_box strong {
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.arrow_box {
+    padding-top: 10px;
+}
+
+.arrow_box {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-right: 40px;
+    background: #eeeeee;
+    border-radius: 20px;
+    padding: 20px;
+    /* padding-right: 10px; */
+    text-align: left;
+    color: #444444;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 20px;
+    /* overflow: scroll; */
+    /* margin-left: 0px; */
+}
+
+.arrow_box:after {
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+    border-color: rgba(106, 90, 205, 0);
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    /* margin-left: -20px; */
+    border-top-color: #eeeeee;
+    top: 100%;
+    left: 50%;
+}
+
+.image-trainner img {
+    padding-top: 2px;
+    width: 20%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image-trainner p {
+    text-align: center;
+    font-weight: bold;
+    color: #555555;
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+footer {
+    color: #555555;
+    margin-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 100px;
+}

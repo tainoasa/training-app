@@ -1,0 +1,59 @@
+.th {
+    background-color: rgb(222, 216, 209);
+}
+
+.Table1 {
+    font-size: 25px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.Table2 {
+    font-size: 25px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.TableName1 {
+    margin-top: 180px;
+    text-align: center;
+}
+
+.TableName2 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.TableButton {
+    padding: 10px 20px;
+    background-color: #555555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5%;
+}
+
+.item1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.item2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.item3 {
+    width: 55%;
+    text-align: center;
+    position: absolute;
+    top: 1000px;
+}
+
+.input {
+    font-size: 25px;
+}
