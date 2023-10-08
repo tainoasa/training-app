@@ -57,16 +57,40 @@ const TrainingList = () => {
     });
   })
 
+  const style = {
+    width: "560px",
+    margin: "0 auto",
+  }
+
   return (
     <>
-      <div>
+      <div style={{
+        position: "fixed",
+        background: "#eee",
+        width: "100px",
+        height: "100%",
+        // top: "-00px",
+        // boxSizing: "border-box",
+        // marginLeft: "220px",
+        // padding: "20px 40px",
+      }}>
+        <ul>
+          <li><a href="#肩">肩</a></li>
+          <li><a href="#胸">胸</a></li>
+          <li><a href="#腕">腕</a></li>
+          <li><a href="#腹">腹</a></li>
+          <li><a href="#背中">背中</a></li>
+          <li><a href="#脚">脚</a></li>
+        </ul>
+      </div>
+      <div style={style}>
         {['肩', '胸', '腕', '腹', '背中', '脚'].map((part) => (
           <>
-            <h1>部位: {part}</h1>
+            <h1 id={part}>{part}のトレーニング</h1>
             {trainingList.map((item) => {
               if (item.training_parts == part) {
                 return (
-                  <div key={item.id} id={item.id}>
+                  <div key={item.id} id={item.id} style={{ marginTop: "20px" }}>
                     <h2>{item.training_name}</h2>
                     {/* <p>部位：{item.training_parts}</p> */}
                     <iframe

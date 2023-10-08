@@ -4,9 +4,10 @@
 }
 
 header {
-  position: relative;
+  position: fixed;
   width: 100%;
   min-width: 1200px;
+  top: 0;
 }
 
 header .menu-list {
