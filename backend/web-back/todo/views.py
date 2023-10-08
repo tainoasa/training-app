@@ -60,8 +60,10 @@ class ChatRespponseApiView(generics.ListAPIView):
     def post(self, request, format=None):
         data = json.loads(request.body)
         res = requests.post('http://172.20.7.60:2150/chat',json=data)
-        
+        # res = requests.get('https://zipcloud.ibsnet.co.jp/api/search?zipcode=6391056')
+        print(res.text)
         r = json.loads(res.text)
+        # r = data
 
         queryset = Training_list.objects.all()
         menu_set = serializers.serialize("json", queryset)

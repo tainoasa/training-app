@@ -17,7 +17,7 @@ class Training_historySerializer(serializers.ModelSerializer):
 class Training_listSerializer(serializers.ModelSerializer):
     class Meta:
         model = Training_list
-        fields = ( 'training_name','training_parts', 'training_movie')
+        fields = ('id', 'training_name','training_parts', 'training_movie')
 
 class Recommend_historySerializer(serializers.ModelSerializer):
     class Meta:

@@ -27,6 +27,7 @@ const TrainingList = () => {
       console.log(response?.data);
       const data = response?.data as Training[];
       for (let i = 0; i < data.length; i++) {
+        // data[i].id = i.toString();
         let url: string = data[i].training_movie.toString();
         data[i].training_movie = url.replace("youtu.be", "youtube.com/embed");
       }
@@ -36,26 +37,70 @@ const TrainingList = () => {
     }
   };
 
+  ['肩', '胸'].map((part) => {
+    trainingList.map((item) => {
+      if (item.training_parts == part) {
+        return (
+          <div key={item.id} id={item.id}>
+            <h1>{item.training_name}</h1>
+            <p>部位：{item.training_parts}</p>
+            <iframe
+              width="560"
+              height="315"
+              src={item.training_movie.toString()}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>);
+      }
+    });
+  })
+
   return (
-    <div>
+    <>
+      <div>
+        {['肩', '胸', '腕', '腹', '背中', '脚'].map((part) => (
+          <>
+            <h1>部位: {part}</h1>
+            {trainingList.map((item) => {
+              if (item.training_parts == part) {
+                return (
+                  <div key={item.id} id={item.id}>
+                    <h2>{item.training_name}</h2>
+                    {/* <p>部位：{item.training_parts}</p> */}
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={item.training_movie.toString()}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>)
+              }
+            })}
+          </>
+        ))}
+      </div>
+      {/* <div>
       {trainingList.map((item) => (
-        <div key={item.id} id="hoge">
-          <h1>{item.training_name}</h1>
-          {/* <h1>{item.training_name}</h1> */}
-          <p>{item.training_parts}</p>
-          {/* <p>{item.training_movie}</p> */}
-          <iframe
-            width="560"
-            height="315"
-            src={item.training_movie.toString()}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <div key={item.id} id={item.id}>
+        <h1>{item.training_name}</h1>
+        <p>部位：{item.training_parts}</p>
+        <iframe
+          width="560"
+          height="315"
+          src={item.training_movie.toString()}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
       ))}
-    </div>
+    </div> */}
+    </>
   );
 };
 
