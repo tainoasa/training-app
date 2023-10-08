@@ -1,2 +1,2 @@
 # training-app
-hackason
+Git練習
