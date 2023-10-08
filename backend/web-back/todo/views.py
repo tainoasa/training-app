@@ -54,6 +54,52 @@ class DummyRespponseApiView(generics.ListAPIView):
 #     "name": "DUMMY!","menu":["ベンチプレス","ペックフライ"]
 #     }
 
+class CreatTraining_history(generics.ListAPIView):
+    authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+    def post(self, request, format=None):
+        data = json.loads(request.body)
+        print(len(data))
+        print(data)
+        for i in range(len(data)):
+            print(data[i]['training_menu'])
+            Training_history.objects.create(training_menu = data[i]['training_menu'],training_weight = data[i]['training_weight'],training_times = data[i]['training_times'],training_set = data[i]['training_set'])
+        queryset = Training_history.objects.all()
+        training_his = serializers.serialize("json", queryset)
+        training_his = json.loads(training_his)
+        return Response(training_his)
+
+
+# 入力
+# [
+#   {
+#     "training_menu":"ベンチプレス",
+#     "training_weight":"70",
+#     "training_times": "5",
+#     "training_set" :"3"
+#   },
+#   {
+#     "training_menu":"ベンチプレス",
+#     "training_weight":"70",
+#     "training_times": "5",
+#     "training_set" :"3"
+#   }
+#  ]
+# 出力
+# [
+# {
+# "model": "todo.training_history",
+# "pk": 9,
+# "fields":{"training_menu": "ベンチプレス", "training_weight": 70, "training_times": 5, "training_set": 3…}
+# },
+# {
+# "model": "todo.training_history",
+# "pk": 10,
+# "fields":{"training_menu": "ベンチプレス", "training_weight": 70, "training_times": 5, "training_set": 3…}
+# }
+# ]
+
+
+
     
 class ChatRespponseApiView(generics.ListAPIView):
     authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
