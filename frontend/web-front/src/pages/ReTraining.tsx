@@ -7,13 +7,13 @@ import LastTrainingDay from './LastTrainingDay';
 import ExperienceGauge from './ExperienceGauge';
 
 
-const ReTraining = ({ expoint, setExpoint, level, setLevel }) => {
+const ReTraining = ({ expoint, setExpoint, level, setLevel, past_menu, setPast_menu, past_weight, setPast_Weight, past_times, setPast_Times,
+    past_set, setPast_Set, past_package, setPast_package }) => {
     const [training_menu, setTraining_menu] = useState("");
     const [training_weight, setWeight] = useState("");
     const [training_times, setCount] = useState("");
     const [training_set, setSet] = useState("");
     const [training_package, setTraining_package] = useState([]);
-    const [clonedTableData, setClonedTableData] = useState([]);
     const button1Ref = useRef(null);
     const button2Ref = useRef(null);
 
@@ -37,13 +37,43 @@ const ReTraining = ({ expoint, setExpoint, level, setLevel }) => {
             // then 以下で問題なくレスポンスが返ってきた際の挙動を記述
             (response) => {
                 // TypeScriptの型指定は後ろに as をこのように付けることでも可能。
-                const JASON = response.data;
-                const fields = JASON.fields;
-                console.log(fields.ex_parameter);
-                console.log(fields.user_level);
-                console.log(training_package);
+                const JSON = response.data;
+                const fields = JSON.fields;
                 setExpoint(fields.ex_parameter);
                 setLevel(fields.user_level);
+            }
+        ).catch(
+            // catch 以下では問題があった際の挙動を記述
+            () => {
+                alert('エラーが発生しました。')
+            }
+        )
+    };
+
+    const [trainingList, setTrainingList] = useState([]);
+    useEffect(() => {
+        getHistoryData();
+    }, []);
+
+    // トレーニング履歴apiとの通信
+    const getHistoryData = async () => {
+        // エンドポイントを指定
+        const endPoint: string = 'http://localhost:8080/api/add_training_history/'
+        // axios.post で POST メソッドを実行することを指示。
+        // 第一引数にエンドポイント, 第二引数にリクエストボディを指定。
+        axios.post(
+            endPoint, training_package
+        ).then(
+            // then 以下で問題なくレスポンスが返ってきた際の挙動を記述
+            (response) => {
+                // TypeScriptの型指定は後ろに as をこのように付けることでも可能。
+                const JSON_LIST = response.data;
+                JSON_LIST.forEach(item => {
+                    setPast_menu(item.fields.training_menu)
+                    setPast_Weight(item.fields.training_weight)
+                    setPast_Times(item.fields.training_times)
+                    setPast_Set(item.fields.training_set)
+                })
             }
         ).catch(
             // catch 以下では問題があった際の挙動を記述
@@ -66,6 +96,7 @@ const ReTraining = ({ expoint, setExpoint, level, setLevel }) => {
 
     return (
         <div className={styles.TrainingTabeleContainer}>
+            <button onClick={getHistoryData}>テストAPI</button>
             <h1 className={styles.message}>
                 今日のトレーニングを記録！
             </h1>

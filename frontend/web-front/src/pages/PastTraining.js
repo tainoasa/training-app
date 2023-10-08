@@ -1,51 +1,36 @@
 import React from 'react'
 import styles from './PastTraining.module.css';
 
-const PastTraining = () => {
-
-    const test_data =
-        [
-
-            {
-                "training_menu": "ベンチプレス",
-                "training_weight": "30",
-                "training_times": "6",
-                "training_set": "3"
-            },
-
-            {
-                "training_menu": "ベンチプレス",
-                "training_weight": "40",
-                "training_times": "4",
-                "training_set": "3"
-            }
-
-        ];
+const PastTraining = ({ past_menu, setPast_menu, past_weight, setPast_Weight, past_times, setPast_Times,
+    past_set, setPast_Set, past_package, setPast_package }) => {
 
     return (
         <div className={styles.Past}>
-            <h2 className={styles.PastTitle}>
+            {/* <h2 className={styles.PastTitle}>
                 過去のトレーニング
-            </h2>
-            <table border={1} className={styles.PastTable}>
+            </h2> */}
+            {/* <table border={1} className={styles.Table2}>
                 <thead>
                     <tr>
                         <th>トレーニングメニュー</th>
                         <th>重量［kg］</th>
                         <th>回数</th>
                         <th>セット</th>
+                        <th>　　</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>トレーニング</td>
-                        <td>重さ</td>
-                        <td>カウント</td>
-                        <td>セット</td>
-                    </tr>
+                    {past_package.map((menu) => (
+                        <tr key={menu.id}>
+                            <td>{menu.training_menu}</td>
+                            <td>{menu.training_weight}</td>
+                            <td>{menu.training_times}</td>
+                            <td>{menu.training_set}</td>
+                        </tr>
+                    ))}
                 </tbody>
-            </table>
-        </div>
+            </table> */}
+        </div >
     )
 }
 
