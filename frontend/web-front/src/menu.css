@@ -51,7 +51,7 @@ nav button {
 /* ナビゲーションボタン専用の設定 */
 .nav_btn {
   flex: 1;
-  /* width: 500px; */
+  width: 200px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;

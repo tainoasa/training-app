@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import styles from './ExperienceGauge.module.css';
 
 class ExperienceGauge extends Component {
+
     render() {
         // プログレスバーの最大値を計算
-        const maxProgressValue = 3000 * Math.pow(1.5, this.props.level);
+        const maxProgressValue = 2000 * Math.pow(1.5, this.props.level);
 
         // 進行値を計算
-        const progressValue = (this.props.n / maxProgressValue) * 100;
+        const progressValue = (this.props.expoint / maxProgressValue) * 100;
 
         // レベルを表示
         const showlevel = this.props.level;
 
         return (
             <div className={styles.progressBarContainer}>
-                <img src="level8.png" alt="カンガルー" className={styles.kangaroo} />
+                <img src={`level_${this.props.level}.png`} alt="Level" className={styles.image} />
                 <h2 className={styles.Status_h2}>経験値</h2>
                 <div className={`progress ${styles.progressBar}`}>
                     <div

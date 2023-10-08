@@ -17,7 +17,7 @@
 }
 
 .TableName1 {
-    margin-top: 180px;
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -54,6 +54,51 @@
     top: 1000px;
 }
 
-.input {
+.input1 {
     font-size: 25px;
+}
+
+.input2 {
+    font-size: 25px;
+    width: 60px;
+}
+
+.input3 {
+    font-size: 25px;
+    width: 50px;
+}
+
+.input4 {
+    font-size: 25px;
+    width: 30px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 40px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.message:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px rgb(119, 195, 223);
+}
+
+.message:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px rgb(119, 195, 223);
 }

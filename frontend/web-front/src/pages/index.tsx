@@ -6,21 +6,16 @@ import styles from './index.module.css';
 import PastTraining from './PastTraining';
 
 export default (() => {
+  const [expoint, setExpoint] = useState();
+  const [level, setLevel] = useState();
 
-  const getAPIData = async () => {
-    let instance: AxiosInstance
-
-    instance = axios.create({
-      baseURL: 'http://localhost:8080',
-    })
-  }
   return (
     <div className={styles.grid_container}>
       <div className={styles.Table}>
-        <ReTraining />
+        <ReTraining expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
       </div>
       <div className={styles.Status}>
-        <ExperienceGauge level={7} n={1000} />
+        <ExperienceGauge expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
       </div>
       <div className={styles.Past}>
         <PastTraining />

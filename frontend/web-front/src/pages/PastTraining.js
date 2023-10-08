@@ -2,6 +2,26 @@ import React from 'react'
 import styles from './PastTraining.module.css';
 
 const PastTraining = () => {
+
+    const test_data =
+        [
+
+            {
+                "training_menu": "ベンチプレス",
+                "training_weight": "30",
+                "training_times": "6",
+                "training_set": "3"
+            },
+
+            {
+                "training_menu": "ベンチプレス",
+                "training_weight": "40",
+                "training_times": "4",
+                "training_set": "3"
+            }
+
+        ];
+
     return (
         <div className={styles.Past}>
             <h2 className={styles.PastTitle}>

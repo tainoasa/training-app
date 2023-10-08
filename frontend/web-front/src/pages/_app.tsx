@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import Layout from './Layout';
-import './app.css';
+// import './app.css';
 import "../menu.css";
 
 function TrainingApp({ Component, pageProps }: AppProps) {
