@@ -41,7 +41,22 @@ class DummyRespponseApiView(generics.ListAPIView):
     authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
     def post(self, request, format=None):
         # res = requests.post('http://172.20.7.60:2150/chat',json={"text":"野球するには何の筋トレすればいいですか？"})
-        json = {"name": "DUMMY!","menu":["ベンチプレス","ペックフライ"]}
+        json = {
+            "text": "テニスをするために効果的な筋トレを紹介します。テニスは上半身と下半身の両方の筋肉を使うため、それらの筋肉を鍛える必要があります。\n\n- スクワット: 背中側からお尻にかけての筋肉を鍛えます。\n- スタンディングデッドリフト: 胸の前で両手を組んで立ち、そのまま背中側に体を倒していく運動です。背中側の筋肉を鍛えると同時に肩の関節に負荷を与えることができます。\n- バックランジ: 背中側から腰にかけての筋肉を鍛え、背中側のスタビリティを高めます。\n- スクワッシュクロッシュ: 腕を後ろに伸ばして背中側の筋肉を鍛え、肘の関節を安定させます。\n- スクワットチェア: 背もたれのある椅子に背中側から体を預け、脚を伸ばしてスクワットを行います。\n\nこれらの筋トレを行うことで、テニスのパフォーマンスを向上させることができます。ただし、筋トレは激しい痛みを伴うことがありますので、自身の体調に合わせてトレーニングを行ってください。",
+            "menu":[
+                {
+                "id": 32,
+                "training_name": "デッドリフト"
+                },
+                {
+                "id": 35,
+                "training_name": "スクワット"
+                },
+                {
+                "id": 43,
+                "training_name": "ランジ"
+                }
+            ]}
         return Response(json)
 
 # 入力
@@ -106,8 +121,10 @@ class ChatRespponseApiView(generics.ListAPIView):
     def post(self, request, format=None):
         data = json.loads(request.body)
         res = requests.post('http://172.20.7.60:2150/chat',json=data)
-        
+        # res = requests.get('https://zipcloud.ibsnet.co.jp/api/search?zipcode=6391056')
+        print(res.text)
         r = json.loads(res.text)
+        # r = data
 
         queryset = Training_list.objects.all()
         menu_set = serializers.serialize("json", queryset)

@@ -46,6 +46,7 @@ services:
     volumes:
       - ./mysql_volume:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
+      - ./mysql:/data
     networks:
       - volcano_network
 
@@ -60,7 +61,7 @@ services:
       [
         bash,
         -c,
-        yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev
+        yarn upgrade --no-progress --network-timeout 1000000 && yarn run dev,
       ]
     networks:
       - hurricane_network

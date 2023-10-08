@@ -10,15 +10,17 @@ export default (() => {
   const [level, setLevel] = useState();
 
   return (
-    <div className={styles.grid_container}>
-      <div className={styles.Table}>
-        <ReTraining expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
-      </div>
-      <div className={styles.Status}>
-        <ExperienceGauge expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
-      </div>
-      <div className={styles.Past}>
-        <PastTraining />
+    <div className="wrapper">
+      <div className={styles.grid_container}>
+        <div className={styles.Table}>
+          <ReTraining expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
+        </div>
+        <div className={styles.Status}>
+          <ExperienceGauge expoint={expoint} setExpoint={setExpoint} level={level} setLevel={setLevel} />
+        </div>
+        <div className={styles.Past}>
+          <PastTraining />
+        </div>
       </div>
     </div>
   )
